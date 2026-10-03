@@ -13,7 +13,7 @@
 
 ## 🔗 Live Demo & Links
 
-* 🌐 **Live Production Site:** [https://book-verse-one.vercel.app](https://book-verse-one.vercel.app) *(or your Vercel deployment URL)*
+* 🌐 **Live Production Site:** [https://book-verse-nu.vercel.app/](https://book-verse-nu.vercel.app/)
 * 📦 **GitHub Repository:** [https://github.com/Venkat5674/Book-Verse.git](https://github.com/Venkat5674/Book-Verse.git)
 
 ---
@@ -177,14 +177,17 @@ graph TD
 
 ## 📸 UI & Screenshots
 
-| View | Desktop (Light Mode) | Desktop (Dark Mode) |
+| View | Desktop (Page 1) | Desktop (Page 2) |
 |---|---|---|
-| **Home Hero & Carousel** | ![Home Light](https://images.unsplash.com/photo-1507842229451-79b1be886a20?auto=format&fit=crop&w=600&q=80) | ![Home Dark](https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80) |
-| **Catalog & Filters** | ![Catalog](https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=600&q=80) | ![Catalog Dark](https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=600&q=80) |
-| **Book Details & Tabs** | ![Details](https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80) | ![Details Dark](https://images.unsplash.com/photo-1532012164546-f432f2e3777f?auto=format&fit=crop&w=600&q=80) |
-| **Shopping Basket & Vouchers** | ![Cart](https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=600&q=80) | ![Cart Dark](https://images.unsplash.com/photo-1526721940322-10fb6e3ae94a?auto=format&fit=crop&w=600&q=80) |
+| **Home Hero & Carousel** | ![Home Light](https://res.cloudinary.com/l12th5g3/image/upload/v1791026077/homepage-lightmode_qteabe.png) | ![Home Dark](https://res.cloudinary.com/l12th5g3/image/upload/v1791026186/homepage-darkmode_j0tkwa.png) |
+| **Books Page** | ![Catalog](https://res.cloudinary.com/l12th5g3/image/upload/v1791026313/books-page_ueelfh.png) | ![Catalog Page 2](https://res.cloudinary.com/l12th5g3/image/upload/v1791026375/books-page02_sra3zz.png) |
+| **Book Details & Tabs** | ![Details](https://res.cloudinary.com/l12th5g3/image/upload/v1791026498/book-description-page01_b4mdut.png) | ![Details Dark](https://res.cloudinary.com/l12th5g3/image/upload/v1791026537/book-description-page02_kg3jhg.png) |
+| **Search Bar** | ![Search](https://res.cloudinary.com/l12th5g3/image/upload/v1791026987/search-bar01_qgukoh.png) | ![Search](https://res.cloudinary.com/l12th5g3/image/upload/v1791027003/search-bar02_fyi8k5.png) |
+| **Add To Cart Page** | ![Cart](https://res.cloudinary.com/l12th5g3/image/upload/v1791026832/add-to-cart-page_uozd0u.png) | 
+| **Favorites page** | ![Favorite](https://res.cloudinary.com/l12th5g3/image/upload/v1791026618/favorite-books-page_zo22ud.png) |
+| **Checkout Page** | ![Checkout](https://res.cloudinary.com/l12th5g3/image/upload/v1791026949/checkout-page01_tfr23g.png) | ![Checkout](https://res.cloudinary.com/l12th5g3/image/upload/v1791026959/checkout-page02_i0djh9.png) |
+| **Order Confirmation Page** | ![order](https://res.cloudinary.com/l12th5g3/image/upload/v1791027192/order-confirmation-page_virsmn.png) |
 
-*(Replace with your actual site screenshots when recording demos)*
 
 ---
 
