@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 38" width="38" height="38">
+  <style>
+    .logo-bg {
+      fill: #183b36;
+    }
+    @media (prefers-color-scheme: dark) {
+      .logo-bg {
+        fill: #161a25;
+      }
+      .logo-border {
+        stroke: #f28b50;
+        stroke-opacity: 0.6;
+      }
+    }
+  </style>
+
+  <!-- Circular 38x38 badge matching .logo-mark -->
+  <circle cx="19" cy="19" r="19" class="logo-bg" />
+  <circle cx="19" cy="19" r="18" class="logo-border" fill="none" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1" />
+
+  <!-- Playfair Display / Georgia Serif 'B' (font-size: 20px, font-weight: 600) -->
+  <text
+    x="19"
+    y="26"
+    font-family="'Playfair Display', Georgia, 'Times New Roman', serif"
+    font-size="20"
+    font-weight="600"
+    fill="#ffffff"
+    text-anchor="middle"
+  >B</text>
+</svg>

@@ -1,0 +1,252 @@
+.reading-moods {
+    width: 100%;
+    padding: 110px 0;
+    background: var(--color-bg-secondary);
+    border-top: 1px solid var(--color-border);
+    position: relative;
+    overflow: hidden;
+}
+
+.reading-moods-container {
+    width: min(100% - 80px, var(--container-width));
+    margin: 0 auto;
+}
+
+/* -------------------------
+   Header
+------------------------- */
+
+.reading-moods-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.reading-moods-heading-text {
+    max-width: 600px;
+}
+
+.reading-moods-heading-text h2 {
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 4vw, 56px);
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.5px;
+    color: var(--color-text-primary);
+}
+
+.reading-moods-heading-text p {
+    color: var(--color-text-secondary);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* -------------------------
+   Moods Bento Grid
+------------------------- */
+
+.moods-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+}
+
+/* Top row: 2 cards spanning 3 columns each */
+.mood-card-large {
+    grid-column: span 3;
+}
+
+/* Bottom row: 3 cards spanning 2 columns each */
+.mood-card-standard {
+    grid-column: span 2;
+}
+
+.mood-card {
+    display: block;
+    height: 100%;
+    min-height: 270px;
+    padding: 34px;
+    border-radius: var(--radius-lg);
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+    transition:
+        transform 300ms cubic-bezier(0.2, 0.8, 0.2, 1),
+        box-shadow 300ms ease,
+        border-color 300ms ease;
+}
+
+.mood-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: transparent;
+    transition: background-color 300ms ease;
+}
+
+.mood-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(182, 90, 54, 0.35);
+}
+
+.mood-card:hover::before {
+    background: var(--color-accent);
+}
+
+.mood-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.mood-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.mood-category {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+}
+
+.mood-indicator {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.04);
+}
+
+.mood-main {
+    margin-bottom: 28px;
+}
+
+.mood-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 2.2vw, 29px);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.4px;
+    color: var(--color-text-primary);
+    margin-bottom: 8px;
+    transition: color 200ms ease;
+}
+
+.mood-card:hover .mood-title {
+    color: var(--color-accent);
+}
+
+.mood-tagline {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-accent);
+    margin-bottom: 12px;
+    letter-spacing: 0.1px;
+}
+
+.mood-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+}
+
+.mood-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 18px;
+    border-top: 1px solid var(--color-border);
+}
+
+.mood-cta {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: var(--color-text-primary);
+    transition: color 200ms ease;
+}
+
+.mood-arrow {
+    font-size: 16px;
+    color: var(--color-text-secondary);
+    transition: transform 250ms ease, color 200ms ease;
+}
+
+.mood-card:hover .mood-cta {
+    color: var(--color-accent);
+}
+
+.mood-card:hover .mood-arrow {
+    transform: translateX(6px);
+    color: var(--color-accent);
+}
+
+/* -------------------------
+   Responsive
+------------------------- */
+
+@media (max-width: 1024px) {
+    .reading-moods {
+        padding: 80px 0;
+    }
+
+    .reading-moods-container {
+        width: min(100% - 40px, var(--container-width));
+    }
+
+    .moods-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .mood-card-large,
+    .mood-card-standard {
+        grid-column: span 1;
+    }
+
+    .reading-moods-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .reading-moods {
+        padding: 60px 0;
+    }
+
+    .reading-moods-container {
+        width: min(100% - 32px, var(--container-width));
+    }
+
+    .reading-moods-heading-text h2 {
+        font-size: 34px;
+    }
+
+    .moods-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mood-card {
+        padding: 24px;
+        min-height: auto;
+    }
+}

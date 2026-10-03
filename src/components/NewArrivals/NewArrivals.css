@@ -1,0 +1,216 @@
+.new-arrivals {
+    width: 100%;
+    padding: 100px 0 120px;
+    background: var(--color-bg-primary);
+    border-top: 1px solid var(--color-border);
+    position: relative;
+    overflow: hidden;
+}
+
+.new-arrivals-container {
+    width: min(100% - 80px, var(--container-width));
+    margin: 0 auto;
+}
+
+/* -------------------------
+   Header & Controls
+------------------------- */
+
+.new-arrivals-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 45px;
+}
+
+.new-arrivals-heading-text {
+    max-width: 580px;
+}
+
+.new-arrivals-heading-text .section-eyebrow {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--color-accent);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.new-arrivals-heading-text h2 {
+    margin-bottom: 8px;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 4vw, 56px);
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.5px;
+    color: var(--color-text-primary);
+}
+
+.new-arrivals-heading-text p {
+    color: var(--color-text-secondary);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.new-arrivals-controls {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-shrink: 0;
+}
+
+/* Arrow buttons */
+
+.carousel-arrows {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.arrow-btn {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+    background: var(--color-white);
+    color: var(--color-text-primary);
+    font-size: 16px;
+    cursor: pointer;
+    transition:
+        background-color 200ms ease,
+        border-color 200ms ease,
+        color 200ms ease,
+        transform 200ms ease,
+        box-shadow 200ms ease;
+}
+
+.arrow-btn:hover {
+    background: var(--color-bg-dark);
+    border-color: var(--color-bg-dark);
+    color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.arrow-btn:active {
+    transform: translateY(0);
+}
+
+/* -------------------------
+   Horizontal Scroll Track
+------------------------- */
+
+.new-arrivals-track {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 12px 4px 28px 4px;
+    margin: 0 -4px;
+    -webkit-overflow-scrolling: touch;
+
+    /* Hide scrollbar across browsers */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.new-arrivals-track::-webkit-scrollbar {
+    display: none;
+}
+
+.new-arrival-item {
+    flex: 0 0 clamp(260px, 23vw, 310px);
+    scroll-snap-align: start;
+}
+
+/* -------------------------
+   Responsive
+------------------------- */
+
+@media (max-width: 1000px) {
+    .new-arrivals {
+        padding: 80px 0 100px;
+    }
+
+    .new-arrivals-container {
+        width: min(100% - 40px, var(--container-width));
+    }
+
+    .new-arrivals-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .new-arrivals-controls {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .new-arrival-item {
+        flex: 0 0 clamp(240px, 42vw, 290px);
+    }
+}
+
+@media (max-width: 600px) {
+    .new-arrivals {
+        padding: 60px 0 80px;
+    }
+
+    .new-arrivals-container {
+        width: min(100% - 32px, var(--container-width));
+    }
+
+    .new-arrivals-heading-text h2 {
+        font-size: 34px;
+    }
+
+    .new-arrivals-controls {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .carousel-arrows {
+        align-self: flex-end;
+    }
+
+    .new-arrival-item {
+        flex: 0 0 78vw;
+    }
+}
+
+/* ==========================================================================
+   Carousel Arrows — Dark Theme Enhancements
+   ========================================================================== */
+
+[data-theme="dark"] .carousel-arrows .arrow-btn {
+    background: #161a25;
+    border-color: #283042;
+    color: #f8fafc;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .carousel-arrows .arrow-btn:hover {
+    background: linear-gradient(135deg, #f28b50 0%, #ea580c 100%);
+    border-color: #f28b50;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(242, 139, 80, 0.45);
+}
+
+[data-theme="dark"] .carousel-arrows .arrow-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(242, 139, 80, 0.3);
+}
+
+[data-theme="dark"] .carousel-arrows .arrow-btn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(242, 139, 80, 0.35);
+}
+

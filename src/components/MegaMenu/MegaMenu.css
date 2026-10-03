@@ -1,0 +1,149 @@
+.mega-menu {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    background: rgba(247, 244, 238, 0.98);
+
+    border-bottom: 1px solid var(--color-border);
+
+    box-shadow: var(--shadow-md);
+
+    z-index: 999;
+
+    animation: megaMenuEnter 250ms ease forwards;
+}
+
+.mega-menu-container {
+    width: min(100% - 80px, var(--container-width));
+
+    margin: 0 auto;
+
+    padding: 38px 0;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr 1.4fr;
+
+    gap: 50px;
+}
+
+.mega-column {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.mega-column h3 {
+    margin-bottom: 8px;
+
+    font-family: 'DM Sans', sans-serif;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: var(--color-text-primary);
+}
+
+.mega-column h3 a {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-text-primary);
+    display: inline-block;
+}
+
+.mega-column h3 a:hover {
+    color: var(--color-accent);
+    transform: none;
+}
+
+.mega-column a {
+    width: fit-content;
+
+    font-size: 13px;
+
+    color: var(--color-text-secondary);
+
+    transition:
+        color 200ms ease,
+        transform 200ms ease;
+}
+
+.mega-column a:hover {
+    color: var(--color-accent);
+
+    transform: translateX(4px);
+}
+
+.mega-featured {
+    min-height: 180px;
+
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-radius: var(--radius-lg);
+
+    background: var(--color-bg-dark);
+
+    color: var(--color-white);
+}
+
+.mega-featured span {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.mega-featured h2 {
+    font-size: 28px;
+
+    line-height: 1.1;
+
+    color: var(--color-white);
+}
+
+.mega-featured a {
+    width: fit-content;
+
+    color: var(--color-white);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition:
+        color 200ms ease,
+        transform 200ms ease;
+}
+
+.mega-featured a:hover {
+    color: var(--color-accent);
+
+    transform: translateX(4px);
+}
+
+@keyframes megaMenuEnter {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

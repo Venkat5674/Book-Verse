@@ -1,0 +1,63 @@
+/* ==========================================================================
+   Signup.css — BookVerse Signup Page Styles
+   ========================================================================== */
+
+.signup-card-grid {
+    grid-template-columns: 420px 560px;
+    max-width: 980px;
+}
+
+.signup-badge-callout {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(235, 118, 72, 0.18);
+    border: 1px solid rgba(235, 118, 72, 0.4);
+    color: #f7f4ee;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.signup-callout-icon {
+    color: var(--color-accent);
+    font-size: 15px;
+}
+
+/* Password Strength Indicator */
+.password-meter-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6px;
+    gap: 12px;
+}
+
+.meter-tracks {
+    display: flex;
+    gap: 6px;
+    flex: 1;
+}
+
+.meter-step {
+    flex: 1;
+    height: 4px;
+    background: #e2e8f0;
+    border-radius: 999px;
+    transition: background-color 200ms ease;
+}
+
+.meter-label {
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+@media (max-width: 960px) {
+    .signup-card-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+}
